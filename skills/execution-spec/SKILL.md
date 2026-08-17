@@ -44,7 +44,7 @@ Load only the references needed for the current mode:
   - If the execution spec already exists as a Markdown file, validate that file.
   - If the spec exists only in the response draft, write the revised Markdown to a temporary file and validate the temporary file.
   - Run `"${MARKDOWN_ENGINE_BIN_DIR:-$HOME/.local/bin}/markdown-engine" validate --file <spec.md> --profile <skill-dir>/references/execution-spec-validation-profile.yaml --format json`.
-  - If the wrapper is unavailable, install the pinned bundled CLI from the `markdown-engine` repository with `scripts/install-markdown-engine-cli.sh` or set `MARKDOWN_ENGINE_BIN_DIR` to the directory containing `markdown-engine`.
+  - If the wrapper is unavailable or its evidence does not match the active fleet runtime policy, report the runtime issue; do not install a skill-local engine.
   - Treat validation failures as structural findings. Fix deterministic structural failures before returning when possible. If validation cannot run or a validation failure remains, state that explicitly in the output.
   - Treat validation success as a baseline structural pass, not execution approval. Continue review for conditional template paths, package boundary adequacy, milestone semantics, source authority, value/risk sequencing, operational safety, and semantic traceability.
 
