@@ -883,4 +883,3 @@ rules:
     assert:
       text:
         contains: "Final readiness state:"
-

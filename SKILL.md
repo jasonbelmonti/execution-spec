@@ -53,4 +53,3 @@ Load only the references needed for the current mode:
 - For authoring or revision, return the completed or changed execution spec sections and identify any unresolved decision gates.
 - For review, lead with blocking findings, then non-blocking observations, then the verdict.
 - For implementation handoff, include observable outcome, critical path hypothesis, first proving slice, package IDs, work package IDs, milestone IDs, editable paths, read-only paths, validation checkpoints, sequencing, value/risk traces, and coordination triggers.
-
