@@ -1,9 +1,9 @@
 {
   "kind": "skill-markdown-engine-contract",
   "schemaVersion": 1,
-  "profile": "docs/execution-spec-validation-profile.yaml",
+  "profile": "references/execution-spec-validation-profile.yaml",
   "cases": [
-    { "name": "e1-example-passes", "file": "docs/examples/e1-bounded-docs-change-execution.md", "exitStatus": 0, "valid": true, "diagnosticCodes": [] },
+    { "name": "e1-example-passes", "file": "references/examples/e1-bounded-docs-change-execution.md", "exitStatus": 0, "valid": true, "diagnosticCodes": [] },
     { "name": "skill-guide-fails", "file": "SKILL.md", "exitStatus": 1, "valid": false, "diagnosticCodes": ["profile.validation.sectionMissing"] }
   ]
 }
