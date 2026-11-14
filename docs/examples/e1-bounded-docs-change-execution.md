@@ -14,14 +14,14 @@
 | Decision owner | Repository owner |
 | Target branch, release, or milestone | `codex/execution-template-first-draft` |
 | Last updated | 2026-04-24 |
-| Related source docs | `design-spec-template` docs |
+| Related source docs | None; SRC-1 is the governing source. |
 | Related tickets | User request in Codex thread |
 
 ## 0. Execution Summary
 
 Decision requested: Approve to execute
 
-Approved outcome: SRC-1 requests a first-draft analogue to the operational design specification template for execution planning.
+Approved outcome: SRC-1 requests a first-draft controlled execution specification template, authoring guide, review process, and bounded example for execution planning.
 
 Execution approach: Create a documentation-only first pass with a controlled execution template, authoring guide, review process, and bounded example; validate by structural inspection and Markdown heading review.
 
@@ -41,8 +41,7 @@ Section status: Complete
 
 | ID | Source | Authority | Execution implication |
 | --- | --- | --- | --- |
-| SRC-1 | User request: create an analogous execution spec template. | Repository owner request in Codex thread. | Draft the initial execution-spec documentation set. |
-| SRC-2 | Sibling `design-spec-template` repository. | Existing analogue and structure reference. | Mirror the controlled template, authoring guide, review process, and example pattern. |
+| SRC-1 | User request: create a controlled execution spec template. | Repository owner request in Codex thread. | Draft the initial execution-spec documentation set: controlled template, authoring guide, review process, and bounded example. |
 
 In scope: Create Markdown documentation under `docs/` and `docs/examples/`.
 
@@ -50,7 +49,7 @@ Out of scope: Build Codex skill packaging, npm scripts, or global skill installa
 
 Definition of done: Four Markdown files exist, have coherent section structure, and can serve as a first draft for review.
 
-Re-decision boundaries: Changes to the design-spec source model, publication strategy, or global skill packaging require repository owner approval.
+Re-decision boundaries: Changes to the source authority model, publication strategy, or global skill packaging require repository owner approval.
 
 Section status: Complete
 
@@ -85,8 +84,8 @@ Section status: Complete
 | ID | Type | Statement | Owner | Blocking? | Validation or resolution plan |
 | --- | --- | --- | --- | --- | --- |
 | CON-1 | Constraint | The first draft shall stay documentation-only. | Codex | No | Confirm changed paths are under `docs/`. |
-| CON-2 | Constraint | The draft shall preserve controlled vocabulary and review gates analogous to the design template. | Codex | No | Inspect headings and review process. |
-| ASM-1 | Assumption | The execution template should complement, not replace, the design template. | Repository owner | No | Confirm during owner review. |
+| CON-2 | Constraint | The draft shall keep controlled vocabulary and review gates consistent across the template, authoring guide, and review process. | Codex | No | Inspect headings and review process. |
+| ASM-1 | Assumption | The execution template should complement, not replace, upstream documents that decide what to build. | Repository owner | No | Confirm during owner review. |
 | DEP-1 | Dependency | Skill packaging depends on approval of the documentation model. | Repository owner | No | Defer packaging to later work. |
 
 Section status: Complete
@@ -151,7 +150,7 @@ Deferred completeness: Skill packaging, additional examples, and publication dec
 
 | ID | Objective | Owner | Package boundary | Editable paths | Read-only paths | Inputs | Outputs | Dependencies | Observable value enabled | Risk retired | Milestone gate | Validation checkpoint | Completion criteria |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| WP-1 | Prove the template can express one bounded execution end-to-end. | Codex | N/A: docs-only. | `docs/execution-spec-template.md`, `docs/examples/e1-bounded-docs-change-execution.md` | `docs/execution-spec-authoring-guide.md`, `docs/execution-spec-review-process.md` | SRC-1 / SRC-2 / OBJ-1 / SURF-1 / SURF-4 / Q-1 | SURF-1 / SURF-4 | None | Reviewer can inspect one bounded execution path. | Q-1 | MS-1 / MS-2 | VAL-1 | Template and example jointly show source authority, scope, work packages, validation, review, rollout, and traceability for one bounded docs change. |
+| WP-1 | Prove the template can express one bounded execution end-to-end. | Codex | N/A: docs-only. | `docs/execution-spec-template.md`, `docs/examples/e1-bounded-docs-change-execution.md` | `docs/execution-spec-authoring-guide.md`, `docs/execution-spec-review-process.md` | SRC-1 / OBJ-1 / SURF-1 / SURF-4 / Q-1 | SURF-1 / SURF-4 | None | Reviewer can inspect one bounded execution path. | Q-1 | MS-1 / MS-2 | VAL-1 | Template and example jointly show source authority, scope, work packages, validation, review, rollout, and traceability for one bounded docs change. |
 | WP-2 | Expand the authoring and review docs around the proven flow. | Codex | N/A: docs-only. | `docs/execution-spec-authoring-guide.md`, `docs/execution-spec-review-process.md` | `docs/execution-spec-template.md`, `docs/examples/e1-bounded-docs-change-execution.md` | WP-1 / SURF-1 / SURF-4 / Q-2 | SURF-2 / SURF-3 | WP-1 | Procedures preserve the proven flow for authors and reviewers. | Q-2 partially retired through procedure alignment; final retirement waits for WP-3. | MS-2 | VAL-2 | Procedures reference the proven template sections, review dimensions, and decision model without adding new scope. |
 | WP-3 | Tighten traceability, validation, and review gates across the doc set. | Codex | N/A: docs-only. | `docs/execution-spec-template.md`, `docs/execution-spec-authoring-guide.md`, `docs/execution-spec-review-process.md`, `docs/examples/e1-bounded-docs-change-execution.md` | None | WP-1 / WP-2 / SURF-1 / SURF-2 / SURF-3 / SURF-4 / Q-2 | SURF-1 / SURF-2 / SURF-3 / SURF-4 | WP-1 / WP-2 | Documentation-only artifact remains coherent and reviewable. | Q-2 | MS-2 | VAL-3 | Identifiers, headings, validation items, review gates, and Git status show a coherent documentation-only execution artifact; RISK-1 and RISK-2 remain open for future pilot or owner calibration. |
 
@@ -273,7 +272,7 @@ Section status: Complete
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | SRC-1 / OBJ-1 | SURF-1 | N/A: docs-only. | WP-1 / WP-3 | MS-1 / MS-2 | CTRL-3 | VAL-1 / VAL-3 | REV-1 | REL-1 / REL-2 | EVD-1 / EVD-3 |
 | SRC-1 / OBJ-2 | SURF-2 / SURF-3 | N/A: docs-only. | WP-2 / WP-3 | MS-2 | CTRL-3 | VAL-2 / VAL-3 | REV-1 | REL-1 / REL-2 | EVD-2 / EVD-3 |
-| SRC-2 / OBJ-3 | SURF-4 | N/A: docs-only. | WP-1 / WP-3 | MS-1 / MS-2 | CTRL-1 / CTRL-3 | VAL-1 / VAL-3 | REV-1 | REL-1 / REL-2 | EVD-1 / EVD-3 |
+| SRC-1 / OBJ-3 | SURF-4 | N/A: docs-only. | WP-1 / WP-3 | MS-1 / MS-2 | CTRL-1 / CTRL-3 | VAL-1 / VAL-3 | REV-1 | REL-1 / REL-2 | EVD-1 / EVD-3 |
 | Observable outcome | SURF-1 / SURF-2 / SURF-3 / SURF-4 | N/A: docs-only. | WP-1 / WP-2 / WP-3 | MS-1 / MS-2 | CTRL-3 | VAL-1 / VAL-2 / VAL-3 | REV-1 | REL-1 / REL-2 | EVD-1 / EVD-2 / EVD-3 |
 | Critical path / first proving slice | SURF-1 / SURF-4 | N/A: docs-only. | WP-1 | MS-1 / MS-2 | CTRL-3 | VAL-1 | REV-1 | REL-1 | EVD-1 / EVD-3 |
 | Q-1 | SURF-1 / SURF-4 | N/A: docs-only. | WP-1 | MS-1 | CTRL-3 | VAL-1 | REV-1 | REL-1 | EVD-1 / EVD-3 |
